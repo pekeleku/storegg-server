@@ -9,6 +9,7 @@ const flash = require("connect-flash");
 
 const dashboardRouter = require("./app/dashboard/router");
 const categoryRouter = require("./app/category/router");
+const nominalRouter = require("./app/nominal/router");
 const app = express();
 
 // view engine setup
@@ -37,6 +38,7 @@ app.use(
 
 app.use("/", dashboardRouter);
 app.use("/category", categoryRouter);
+app.use("/nominal", nominalRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
