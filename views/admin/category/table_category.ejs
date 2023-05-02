@@ -7,13 +7,13 @@
     </tr>
   </thead>
   <tbody>
-    <% for (let i = 0; i < category.length; i++) { %>;
+    <% for (let i = 0; i < category.length; i++) { %>
     <tr>
       <td><%= i+1 %></td>
       <td><%= category[i].name%></td>
       <td>
         <form
-          action="/category/edit/<%= category[i]._id %>?_method=DELETE"
+          action="/category/edit/<%= category[i]._id %>?_method='DELETE"
           method="POST"
         >
           <a
