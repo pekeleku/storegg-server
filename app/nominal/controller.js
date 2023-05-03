@@ -15,7 +15,7 @@ module.exports = {
     } catch (error) {
       req.flash("alertMessage", `${error.message}`);
       req.flash("alertStatus", "danger");
-      res.redirect("/category");
+      res.redirect("/nominal");
     }
   },
   viewCreate: async (req, res) => {
