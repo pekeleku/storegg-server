@@ -13,6 +13,7 @@ const nominalRouter = require("./app/nominal/router");
 const voucherRouter = require("./app/voucher/router");
 const bankRouter = require("./app/bank/router");
 const paymentRouter = require("./app/payment/router");
+const userRouter = require("./app/users/router");
 const app = express();
 
 // view engine setup
@@ -39,7 +40,8 @@ app.use(
   express.static(path.join(__dirname, "/node_modules/admin-lte"))
 );
 
-app.use("/", dashboardRouter);
+app.use("/", userRouter);
+app.use("/dashboard", dashboardRouter);
 app.use("/category", categoryRouter);
 app.use("/nominal", nominalRouter);
 app.use("/voucher", voucherRouter);
