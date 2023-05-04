@@ -56,6 +56,14 @@ include('../../partials/sidebar.ejs') %>
                       selected
                  <%   } %>
                     >BCA</option>
+                    <% if (bank.nameBank === "Mandiri") { %>
+                      selected
+                 <%   } %>
+                    >Mandiri</option>
+                    <% if (bank.nameBank === "Credit card") { %>
+                      selected
+                 <%   } %>
+                    >Credit card</option>
                     <option value="BNI"   <% if (bank.nameBank === "BNI") { %>
                       selected
                  <%   } %>>BNI</option>
@@ -65,18 +73,7 @@ include('../../partials/sidebar.ejs') %>
                  <%   } %>>BRI</option>
                   </select>
                 </div>
-                <!-- <div class="form-group">
-                  <label for="nameBank">Nama Bank</label>
-                  <input
-                    type="text"
-                    name="nameBank"
-                    class="form-control"
-                    id="nameBank"
-                    value="<%= bank.nameBank %>"
-                    placeholder="Masukan Nama Bank"
-                    required
-                  />
-                </div> -->
+              
                 <div class="form-group">
                   <label for="noRekening">Nomor Rekening</label>
                   <input
