@@ -47,28 +47,28 @@ include('../../partials/sidebar.ejs') %>
                   <select
                     class="form-control select2"
                     style="width: 100%"
-                    name="nameBank"
+                    name="bankName"
                     required
                   >
                     <option selected="selected">Pilih Bank</option>
                     <option value="BCA"
-                    <% if (bank.nameBank === "BCA") { %>
+                    <% if (bank.bankName === "BCA") { %>
                       selected
                  <%   } %>
                     >BCA</option>
-                    <% if (bank.nameBank === "Mandiri") { %>
+                    <% if (bank.bankName === "Mandiri") { %>
                       selected
                  <%   } %>
                     >Mandiri</option>
-                    <% if (bank.nameBank === "Credit card") { %>
+                    <% if (bank.bankName === "Credit card") { %>
                       selected
                  <%   } %>
                     >Credit card</option>
-                    <option value="BNI"   <% if (bank.nameBank === "BNI") { %>
+                    <option value="BNI"   <% if (bank.bankName === "BNI") { %>
                       selected
                  <%   } %>>BNI</option>
                     <option value="BRI"
-                    <% if (bank.nameBank === "BRI") { %>
+                    <% if (bank.bankName === "BRI") { %>
                       selected
                  <%   } %>>BRI</option>
                   </select>
