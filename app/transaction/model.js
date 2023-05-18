@@ -26,6 +26,15 @@ let transactionSchema = mongoose.Schema(
         type: Number,
       },
     },
+    historyPayment: {
+      name: { type: String, require: [true, "nama harus diisi."] },
+      type: { type: String, require: [true, "tipe pembayaran harus diisi."] },
+      bankName: { type: String, require: [true, "nama bank harus diisi."] },
+      noRekening: {
+        type: String,
+        require: [true, "nomor rekening harus diisi."],
+      },
+    },
     name: {
       type: String,
       require: [true, "Nama harus diisi"],
