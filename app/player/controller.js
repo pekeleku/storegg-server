@@ -60,7 +60,7 @@ module.exports = {
       const { accountUser, name, nominal, voucher, payment, bank } = req.body;
       const res_voucher = await Voucher.findOne({ _id: voucher })
         .select("name category _id thumbnail user")
-        .populate("category")
+        .populate("category", "name")
         .populate("user");
       if (!res_voucher)
         return res
@@ -86,7 +86,9 @@ module.exports = {
       const payload = {
         historyVoucherTopup: {
           gameName: res_voucher._doc.name,
-          category: res_voucher._doc.category ? res_voucher._doc.category : "",
+          category: res_voucher._doc.category
+            ? res_voucher._doc.category.name
+            : "",
           thumbnail: res_voucher._doc.thumbnail,
           coinName: res_nominal._doc.coinName,
           coinQuantity: res_nominal._doc.coinQuantity,
