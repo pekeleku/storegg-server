@@ -89,7 +89,7 @@ module.exports = {
           category: res_voucher._doc.category ? res_voucher._doc.category : "",
           thumbnail: res_voucher._doc.thumbnail,
           coinName: res_nominal._doc.coinName,
-          coinQuantity: res_nominal._doc.cointQuantity,
+          coinQuantity: res_nominal._doc.coinQuantity,
           price: res_nominal._doc.price,
         },
         historyPayment: {
